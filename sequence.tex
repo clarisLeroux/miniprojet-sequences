@@ -1,3 +1,47 @@
+
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}	
+\usepackage{color}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry} 
+\usepackage{amsmath}		
+\usepackage{amsfonts}		
+\usepackage{amssymb}	
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{GRIS}{cmyk}{0.7,0.6,0.5,0.3}
+\definecolor{BLEU}{cmyk}{1,0.9,0.1,0}
+
+%%configuration de listings
+\lstset{
+language=[77]Fortran,
+basicstyle=\ttfamily\small, 
+identifierstyle=\color{black}, 
+keywordstyle=\color{blue}, 
+stringstyle=\color{black}, 
+commentstyle=\it\color{ForestGreen}, 
+columns=flexible, 
+tabsize=2, 
+extendedchars=true, 
+showspaces=false, 
+showstringspaces=false, 
+numbers=left, 
+numberstyle=\tiny, 
+breaklines=true, 
+breakautoindent=true, 
+captionpos=b
+}
+
+\begin{document}
+ 
+
 %
 % vos diagrammes
 %
@@ -5,3 +49,48 @@
 %
 %nos diagrammes
 %
+
+\section{initialiser jeu}
+ \subsection{Scénario}
+ 
+ \begin{itemize}
+  \item \textbf{Contexte} \\
+  Instanciation d'un jeu par l'IHM lancée par l'utilisateur
+  \item \textbf{Réduction du cas}\\
+  Initialisation du jeu à deux joueurs
+  \item \textbf{Déclenchement}\\
+  Automatique lors de l'instanciation d'un jeu
+  \item \textbf{Résultat}\\
+  Une instance de jeu dont toute la structure (plateau, cases et pions) a été initialisée et où sont inscrits deux joueurs de nom A et B correctement initialisés  
+  \item \textbf{Déroulement}\\
+  Créer un plateau (qui sera initialisé) et l'associer à la partie\\
+  Initialiser 2 joueurs de nom A et B et les associer à la partie\\
+ \end{itemize}
+
+ \subsection{Pseudo code}
+ \begin{lstlisting}    
+  creer(){
+  Partie partie = new Partie();
+  nbJoueurs=2;
+  creerPlateau(partie);
+  initialiserJoueurs(nbJoueurs, partie);
+  }
+ \end{lstlisting}
+
+ \section{creerPlateau}
+  \begin{itemize}
+  \item \textbf{Contexte} \\
+  \item \textbf{Réduction du cas}\\
+  \item \textbf{Déclenchement}\\
+  \item \textbf{Résultat}\\
+  \item \textbf{Déroulement}\\
+ \end{itemize}
+
+ \subsection{Pseudo code}
+ \begin{lstlisting}    
+ creerPlateau(Partie partie){
+ 
+ }
+ \end{lstlisting}
+\end{document}
+
